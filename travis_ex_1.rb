@@ -23,12 +23,14 @@ class Person
   end
 end
 
-puts @first_name
-person_1 = Person.new("Casey", "Douce", 1977)
-person_1.say_hello
-person_1.birth_year
-person_1.say_goodbye
+names = ["Casey", "Travis", "Austin", "Owen"]
 
+def send_email(name)
+  puts "Sending email to : " + name
+end
 
-person_2 = Person.new("Travis", "Douce", 1978)
-person_2.say_hello
+names.each do |name|
+  puts "******"
+  puts "Look at: " + name
+  send_email(name)
+end
